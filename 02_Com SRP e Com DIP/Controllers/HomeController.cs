@@ -14,11 +14,16 @@ namespace solid.Controllers
     [Route("[controller]")]
     public class HomeController : ControllerBase
     {
+        readonly IServiceProduto _serviceProduto;
+        public HomeController (IServiceProduto serviceProduto)
+        {
+            _serviceProduto = serviceProduto;
+        }
+
         [HttpPost]
         public IActionResult Salvar(Produto produto)
         {
-            ServiceProduto _serviceProduto = new ServiceProduto(); 
-
+            
             if(_serviceProduto.CadastrarProduto(produto))
             {
                 return Ok();

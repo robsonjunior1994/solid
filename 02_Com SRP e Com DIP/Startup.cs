@@ -11,6 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Sem_SRP;
+using solid.Repository;
+using solid.Service;
 
 namespace solid
 {
@@ -26,6 +29,9 @@ namespace solid
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IProdutoRepository, ProdutoRepository>();
+            services.AddTransient<IServiceProduto, ServiceProduto>();
+            services.AddTransient<ProdutoContext>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
