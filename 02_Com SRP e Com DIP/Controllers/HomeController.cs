@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using Sem_SRP.Models;
 using Sem_SRP;
 using solid.Service;
+using solid.RequestResponse;
 
 namespace solid.Controllers
 {
@@ -21,7 +22,7 @@ namespace solid.Controllers
         }
 
         [HttpPost]
-        public IActionResult Salvar(Produto produto)
+        public IActionResult Salvar(RequestProduto produto)
         {
             
             if(_serviceProduto.CadastrarProduto(produto))

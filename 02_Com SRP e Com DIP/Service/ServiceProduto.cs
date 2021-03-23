@@ -1,5 +1,6 @@
 ﻿using Sem_SRP.Models;
 using solid.Repository;
+using solid.RequestResponse;
 
 namespace solid.Service
 {
@@ -10,7 +11,7 @@ namespace solid.Service
         {
             _produtoRepository = produtoRepository;
         }
-        public bool CadastrarProduto(Produto p)
+        public bool CadastrarProduto(RequestProduto p)
         {
             Produto produto = new Produto()
             {
