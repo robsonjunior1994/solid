@@ -20,6 +20,7 @@ namespace solid.Controllers
             {
                 return BadRequest();
             }
+
             else 
             {
                 ProdutoContext produtoContext = new ProdutoContext();
