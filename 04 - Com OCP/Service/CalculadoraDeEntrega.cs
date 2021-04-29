@@ -5,7 +5,7 @@ namespace Sem_OCP.Service
 {
     public class CalculadoraDeEntrega
     {
-        public void CalcularEntre(IList<Produto> produtos)
+        public void CalcularEntrega(IList<Produto> produtos)
         {
             foreach(Produto produto in produtos){
                 produto.CalcularTaxaDeEntrega();

@@ -4,7 +4,7 @@ namespace Sem_OCP.Models
     {
         public override void CalcularTaxaDeEntrega()
         {
-            // code...
+            this.TaxaDeEntrega = this.Valor * 0.1;
         }
     }
 }
